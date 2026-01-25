@@ -1,6 +1,11 @@
+import { Slot } from "expo-router";
+import { AuthProvider } from "../context/AuthContext";
 import "./globals.css";
-import { Stack } from "expo-router";
 
 export default function RootLayout() {
-  return <Stack />;
+  return (
+      <AuthProvider>
+        <Slot />
+      </AuthProvider>
+  );
 }
